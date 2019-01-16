@@ -83,7 +83,7 @@ The steps below describe the process of a node registering with a listing servic
 #### Additional notes:
 - Notice the node operator doesn't really need to do much in this process. They only need to provide info, add a job, and sign a transaction. Then as long as their node is set up correctly, the rest of the registration process is automatic for them.
 - As long as the node responds within 5 minutes, it receives its LINK payment back by being withdrawable from their oracle contract. This also means the listing service can grief nodes by simply not responding when they attempt to register. However, that would be clearly visible on-chain, since it would be seen many requests coming in, but no (or late) responses coming back.
-- Simply transferring LINK to the contract does not trigger
+- Simply transferring LINK to the contract does not trigger any functions on the ListingServiceController contract. This is by-design because normal transfers do not include a data payload.
 
 ## Developers
 
